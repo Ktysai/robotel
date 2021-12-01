@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<robot name="pan_tilt">
+
+
+<!-- baza robotului -->
+	<link name="base_link">
+		
+		<!-- baza robotului VIZUAL-->
+    <visual>
+
+			<!-- baza robotului GEOMETRIE-->
+			<geometry>
+				<cylinder length="0.02" radius="0.2"/>
+      </geometry>
+    </visual>
+  
+	</link>
+
+
+	<link name="pan_link">
+		
+		<!-- baza robotului VIZUAL-->
+    <visual>
+
+			<!-- baza robotului GEOMETRIE-->
+			<geometry>
+				<cylinder length="0.4" radius="0.04"/>
+      </geometry>
+    </visual>
+  
+	</link>
+
+
+<!--CUPLE: baza robotului & cilindru -->
+	<joint name="base_to_pan_link" type="fixed">
+    <parent link="base_link"/>
+    <child link="pan_link"/>
+	</joint>
+
+
+</robot>
